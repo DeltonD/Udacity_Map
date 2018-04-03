@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #2f3640;
+}
+/*Default Map Styles*/
+#map{flex: 1 1 auto;}.maps-frame{height: 100%;}.kd-tabbed-vert.header-links .kd-tabbutton a{color:#757575;display:inline-block;height:100%;padding:0 24px;width:100%}.kd-tabbed-vert.header-links .kd-tabbutton{padding:0}.kd-tabbed-vert.header-links .kd-tabbutton.selected a{color:#03a9f4}.kd-tabbed-vert.header-links .kd-tabbutton a:focus{text-decoration:none}p.top-desc{padding:1em 1em .1em 1em}p.bottom-desc{padding:0em 1em 1em 1em}
+
+
+/*Side Bar*/
+#searchbar{
+    display: flex;
+    flex:0 1 auto;
+    flex-direction: column;
+    width: 320px;
+    background-color:#353b48;
+}
+.list{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.textbox {
+    width: 260px;
+    border: 0px;
+    padding: 10px;
+    font-size: 15px;
+    color: #2f3640;
+    background: #f5f6fa;
+    padding-right: 50px;
+
+}
+.clearbutton{
+    position:absolute;
+    left:290px;
+    display: inline-block;
+    font-size: 34px;
+    color:#7f8fa6;
+}
+.sidebarInfo{
+    background-color: #f5f6fa;
+    text-align: center;
+}
+
+/*Styles for List Items*/
+.item{
+    position: relative;
+    height: 100px;
+    background: #f5f6fa;
+}
+.item img{
+    height: 100px;
+    float: left;
+}
+.item span{
+    width: 180px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    text-align: center;
+    color: #f5f6fa;
+    background: #353b48;
+}
+.item h3{
+    position: relative;
+    top: 0.5em;
+    left: 0.5em;
+    font-size: 15px;
+    font-weight: bold;
+}
+.item p{
+    position:relative;
+    top:-0.5em;
+    left:0.5em;
+}
+
+/*Styles for the Place Component*/
+.place{
+    word-break: break-all;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 320px;
+    background-color: #f5f6fa;
+}
+.place .img{
+    height: 200px;
+    margin-bottom: -20px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.place .header{
+    height: auto;
+    width: 100%;
+    color:#f5f6fa;
+    background-color: #2f3640;
+    padding-left: 0.5em;
+    padding-bottom: 0.1em;
+}
+.place h1{
+    padding-top: 0.5em;
+}
+.place p{
+    margin-top: -1em;
+}
+.place .desc{
+    padding-top: 20px;
+}
+.descItem{
+    padding-left: 15px;
+    height: 50px;
+}
+.desc img{
+    width:30px;
+    height:30px;
+    vertical-align:middle;
+    float:left;
+    padding-right: 10px;
+}
+
+/*Page Layout*/
+#page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#content{
+    min-height:0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Menu Button*/
+.button {
+    width: 30px;
+    margin-left: 5px;
+    align-content: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar, .barm {
+    border-radius: 5px;
+    width: 20px;
+    height: 4px;
+    background-color: white;
+    margin: 6px auto;
+}
+.barm{
+    width: 30px;
+}
