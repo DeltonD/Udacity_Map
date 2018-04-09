@@ -45,6 +45,10 @@ export const loadAll = () => {
                     if(success === 3){
                         resolve(places);
                     }
+
+                }),
+                error:(()=>{
+                    reject();
                 })
             });
         })

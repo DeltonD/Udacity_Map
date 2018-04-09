@@ -26,15 +26,16 @@ export function addMarker(place, map, onClick) {
 
     marker.addListener('click', function() {
         onClick(place.id);
-        marker.setAnimation(window.google.maps.Animation.BOUNCE);
-        window.setTimeout(function() {
-           marker.setAnimation(null);
-        }, 1000);
-
+        bounceMarker(place.id);
     });
     markers.push(marker);
 }
-
+export function bounceMarker(id){
+    markers[id].setAnimation(window.google.maps.Animation.BOUNCE);
+    window.setTimeout(function() {
+           markers[id].setAnimation(null);
+    }, 1000);
+}
 //Default function to setup a map
 export const createMap = () => {
     map = new window.google.maps.Map(document.getElementById('map'), {center: myLatLng, zoom: 18, styles: style});

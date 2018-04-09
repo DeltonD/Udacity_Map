@@ -39,6 +39,7 @@ class Map extends Component {
 
     placeOnClick(e){
         this.setState({selectedPlace: this.state.results[e]});
+        Maps.bounceMarker(e);
         this.props.toggleSideBar();
     }
 
@@ -51,6 +52,8 @@ class Map extends Component {
         Foursquare.loadAll().then((r) => {
             this.setState({results: r});
             this.loadAll(map, r);
+        }).catch(()=>{
+            alert("The app failed to gather data from Foursquare.");
         });
     }
 
